@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Drop Challenge</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game-container">
+    <header>
+      <p class="brand">charity: water inspired project</p>
+      <h1>Water Drop Challenge</h1>
+      <p>Collect clean water drops. Help bring clean water to everyone!</p>
+    </header>
+
+    <section class="stats" aria-label="Game statistics">
+      <div class="stat">
+        <span>Score</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="stat">
+        <span>Lives</span>
+        <strong id="lives">❤️ ❤️ ❤️</strong>
+      </div>
+      <div class="stat">
+        <span>Streak</span>
+        <strong id="streak">0</strong>
+      </div>
+    </section>
+
+    <section class="progress-section">
+      <div class="progress-label">
+        <span>Clean water goal</span>
+        <span id="progress-text">0 / 100</span>
+      </div>
+      <div
+        class="progress-track"
+        role="progressbar"
+        aria-label="Progress toward clean water goal"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+        id="progress-bar"
+      >
+        <div id="progress-fill"></div>
+      </div>
+    </section>
+
+    <section class="game-area">
+      <h2>Choose a water drop!</h2>
+      <p id="message" aria-live="polite">
+        Pick a drop to start your clean water journey.
+      </p>
+
+      <div class="drop-grid" id="drop-grid">
+        <button class="drop" data-index="0" aria-label="Choose water drop 1">💧</button>
+        <button class="drop" data-index="1" aria-label="Choose water drop 2">💧</button>
+        <button class="drop" data-index="2" aria-label="Choose water drop 3">💧</button>
+      </div>
+
+      <p id="reward" class="reward" aria-live="polite"></p>
+      <button id="reset-button" class="reset-button">Restart Game ↻</button>
+    </section>
+
+    <footer>
+      <p>Small actions can make a big difference.</p>
+      <p>This is an educational prototype, not an official charity: water game.</p>
+    </footer>
+  </main>
+</body>
+</html>
